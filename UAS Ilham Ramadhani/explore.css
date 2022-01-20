@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Saira+Extra+Condensed:wght@300&family=Vibur&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.borders{
+    margin: 0px;
+    padding: 0px;
+}
+
+.border{
+    width: 100%;
+    height: 20%;
+}
+
+.layar{
+    width: 100%;
+    margin: auto;
+}
+
+.background{
+    width: 100%;
+}
+
+.about_data{
+    text-align:left;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+
+.about_data .judul{
+    font-family: Saira Extra Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+}
+
+.about_data .deskripsi{
+    font-family: Saira Extra Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.about_container{
+    row-gap: 2.5rem;
+}
+
+.about_img{
+    display: flex;
+    column-gap: 1rem;
+    align-items: left;
+    justify-content: left;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.about_img img{
+    width: 580px;
+    height: 295px;
+    filter: drop-shadow(12px 10px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.about_img h2{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+}
+
+nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    line-height: 60px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.31);
+}
+
+nav .title{
+    z-index: -1;
+    font-family: Vibur;
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    padding-left: 15px;
+    width: 200px;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+nav .menu{
+    float: right;
+    height: 60px;
+    max-width: 100%;
+}
+
+nav .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 30px;
+    display: flex;
+}
+
+nav .menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a{
+    font-family: Mate SC;
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 68px;
+    height: 31px;
+    left: -23px;
+    top: -9px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle .garis{
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg)translate(-1px, -2.5px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+.destinasi {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+.destinasi .title{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+}
+
+.place_card,
+.place_img {
+    height: 320px;
+    width: 220px;
+    border-radius: 30px;
+    filter: drop-shadow(12px 10px 20px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
+.place_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+.place_card {
+    position: relative;
+}
+
+.place_card:hover {
+    transform: scale(1.1);
+}
+
+.tempat {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 260px;
+
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.kuliner {
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.kuliner .title{
+    font-family: Poly;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 57px;
+}
+
+.kuliner_card,
+.kuliner_img {
+    height: 200px;
+    width: 200px;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 336px;
+    cursor: pointer;
+}
+
+.kuliner_card {
+    margin-left: 50px;
+}
+
+.kuliner_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.kuliner_card {
+    position: relative;
+}
+
+.kuliner_card:hover {
+    transform: scale(1.1);
+}
+
+.ragam {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 210px;
+
+    font-family: Poly;
+    font-style: normal;
+    font-weight: 150;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.footer {
+    width: 100%;
+    height: 220px;
+    margin-top: 220px;
+    background: #474545;
+}
+
+.footer .box_container{
+    width: 100%;
+    position: absolute;
+}
+
+.footer h2{
+    padding: 2rem;
+    font-family: Vibur;
+    font-size: 36px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p {
+    font-family: Poly;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1280px){
+    .layar {
+        width: 90%;
+    }
+
+    nav .menu ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: black;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav .menu ul.slide {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .about_data{
+        text-align:left;
+        margin-top: 60px;
+        margin-right: 40px;
+        float:none;
+        width:100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about_data .judul{
+        font-family: Saira Extra Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 5px;
+    }
+    
+    .about_data .deskripsi{
+        font-family: Saira Extra Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    
+    .about_container{
+        row-gap: 2.5rem;
+    }
+    
+    .about_img{
+        display: block;
+        column-gap: 1rem;
+        text-align: center;
+        margin-left: 60px;
+        margin-top: 30px;
+    }
+    
+    .about_img img{
+        width: 290px;
+        height: 147px;
+        filter: drop-shadow(12px 10px 20px rgba(0, 0, 0, 0.25));
+        border-radius: 10px;
+    }
+    
+    .about_img h2{
+        font-family: Poly;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+    }
+
+    .kuliner_container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8rem;
+    }
+
+    .kuliner {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .about_img-overlay {
+        float:none;
+        width:100%;
+        display: block;
+        margin:auto;
+    }
+
+    .top{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .border{
+        width: 100%;
+        height: 20%;
+    }
+}

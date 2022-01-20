@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Indonesia</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <nav>
+        <div class="layar">
+            <div class="title">Jelajah Indonesia</div>
+            <div class="menu">
+                <a href="" class="menu-toggle">
+                    <input type="checkbox">
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Let's Explore</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="halaman">
+        <main>
+            <section class="gallery" id="gallery">
+                <h1 class="title">IMAGE GALLERY</h1>
+                <div class="gallery_coantainer container grid">
+                        <img src="Asset/Gallery/1.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/2_2.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/3_3.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/4_4.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/5_5.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/6_6.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/7_7.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/8_8.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/9_9.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/10_10.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/11_11.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/12_12.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/13_13.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/14_14.jpg"  onclick="openFullImg(this.src)">
+                        <img src="Asset/Gallery/15_15.jpg"  onclick="openFullImg(this.src)">
+                </div>
+            </section>
+            <section class="apa">
+                <div class="full_img" id="full">
+                    <img src="Asset/Gallery/1.jpg" id="fullImg">
+                    <span onclick="closeFullImg()">X</span>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" id="footer">
+            <div class="box_container">
+                <h2>Jelajah Indonesia</h2>
+                <p>Copyright 2021 @JelajahIndonesia </p>
+            </div>
+        </footer>
+    </div>
+    <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Indonesia</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <nav>
+        <div class="layar">
+            <div class="title">Jelajah Indonesia</div>
+            <div class="menu">
+                <a href="" class="menu-toggle">
+                    <input type="checkbox">
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                    <span class="garis"></span>
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Let's Explore</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="halaman">
+        <main>
+            <section class="feedback" id="feedback">
+                <div class="container">
+                    <div class="contact-box">
+                        <div class="left"></div>
+                        <div class="right">
+                            <h2>Your Feedback</h2>
+                            <input type="text" class="field" placeholder="Your Name">
+                            <input type="text" class="field" placeholder="Your Email">
+                            <textarea placeholder="Feedback" class="field"></textarea>
+                            <button class="btn" onclick="popUp()" id="pop">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer" id="footer">
+                <div class="box_container">
+                    <h2>Jelajah Indonesia</h2>
+                    <p>Copyright 2021 @JelajahIndonesia </p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Saira+Extra+Condensed:wght@300&family=Vibur&display=swap');
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.layar{
+    width: 100%;
+    margin: auto;
+}
+
+.background{
+    width: 100%;
+}
+
+nav {
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    line-height: 60px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.31);
+}
+
+nav .title{
+    z-index: -1;
+    font-family: Vibur;
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    padding-left: 15px;
+    width: 200px;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+nav .menu{
+    float: right;
+    height: 60px;
+    max-width: 100%;
+}
+
+nav .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 30px;
+    display: flex;
+}
+
+nav .menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+
+nav ul li a{
+    font-family: Mate SC;
+    color: #fff;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#video{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    z-index: -2;
+}
+
+header .intro{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+header .intro h3{
+    font-family: Poly;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    border-color: black;
+    margin-bottom: 30px;
+    text-shadow: black;
+}
+
+header .intro p{
+    font-family: Poly;
+    border-color: black;
+    text-shadow: black;
+}
+
+.button{
+    background-color: #2ecc71;
+    height: 40px;
+    line-height: 42px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.button:hover{
+    background-color: #27ae60;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 68px;
+    height: 31px;
+    left: -23px;
+    top: -9px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle .garis{
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg)translate(-1px, -2.5px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+@media screen and (max-width: 1280px){
+    .layar {
+        width: 90%;
+    }
+
+    nav .menu ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: black;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav .menu ul.slide {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .intro p{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
